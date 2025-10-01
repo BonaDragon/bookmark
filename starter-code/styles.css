@@ -15,25 +15,21 @@ body {
     align-items: center;
     padding: 1rem;
     background: white;
+    margin-right: 30px;
+    margin-left: 30px;
     
-  }
-
-  .logo {
-    display: flex;
-    align-items: center;
-    font-weight: bold;
-    color: #252B46;
   }
 
   .logo img {
     width: 150px;
     height: 25px;
-    margin-right: 8px;
+    
 
   }
 
   #menu-toggle {
     display: none;
+    
   }
 
   .menu-icon {
@@ -123,23 +119,63 @@ body {
     height: 15px;
   }
 
-  .first-feature {
-
-    margin-top: 50px;
-    width: 400px;
-    height: auto;
 
 
-  }
+  /*HERO SECTION*/
 
   main div {
 
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
+    text-align: center;
 
   }
 
+  .first-feature img{
+
+    margin-top: 50px;
+    width: 450px;
+    height: auto;
+
+  }
+
+  .first-feature h1 { 
+
+    color: #323232;
+
+  }
+
+  .first-feature p { 
+
+    color: #7d7d7d;
+    margin-bottom: 25px;
+  }
+
+ .chrome-button { 
+
+  color: white;
+  padding: 15px;
+  border: none;
+  background-color: rgb(87, 107, 255);
+  border-radius: 5px;
+  font-size: 15px;
+  margin-right: 5px;
+  
+ }
+
+ .firefox-button { 
+
+  color: rgb(0, 0, 0);
+  padding: 15px;
+  border: none;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-size: 15px;
+  margin-left: 5px;
+ 
+ }
 
 
 }
