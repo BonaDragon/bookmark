@@ -1,0 +1,147 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+
+}
+
+
+
+@media (max-width: 768px) {
+
+  /* HEADER MENU*/
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: white;
+    
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    color: #252B46;
+  }
+
+  .logo img {
+    width: 150px;
+    height: 25px;
+    margin-right: 8px;
+
+  }
+
+  #menu-toggle {
+    display: none;
+  }
+
+  .menu-icon {
+    cursor: pointer;
+    width: 25px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .menu-icon span {
+    display: block;
+    height: 3px;
+    background: #252B46;
+    border-radius: 2px;
+    transition: 0.3s;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 200px;
+    height: 100vh;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 4rem;
+    transition: 0.3s;
+
+  }
+
+  nav div {
+
+    display: flex;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #ffffff;
+    margin: 1rem 0;
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+
+  nav a:last-of-type {
+
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 10px 130px 10px 130px;
+    /* top right bottom left */
+  }
+
+  hr {
+
+    width: 20rem;
+    height: 1px;
+    border: none;
+    font-weight: 100;
+    background-color: #7d7d7d;
+
+  }
+
+  #menu-toggle:checked~nav {
+    right: 0%;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(4, 9, 46, 0.877);
+
+  }
+
+  nav img {
+
+    margin-right: 30px;
+    color: #ffffff;
+    filter: brightness(0) invert(1);
+    margin-bottom: 1.2rem;
+
+  }
+
+  .close {
+    margin-top: 5px;
+    margin-left: 140px;
+    width: 15px;
+    height: 15px;
+  }
+
+  .first-feature {
+
+    margin-top: 50px;
+    width: 400px;
+    height: auto;
+
+
+  }
+
+  main div {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+
+
+}
+
+@media (min-width: 1024px) {}
