@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bookmark Nav</title>
-   <link rel="stylesheet" href="styles.css">
-  
+  <link rel="stylesheet" href="styles.css">
+
 </head>
+
 <body>
   <header>
     <div class="logo">
       <img src="images/logo-bookmark.svg" alt="logo">
-      
+
     </div>
     <label for="menu-toggle" class="menu-icon">
       <span></span>
@@ -20,15 +22,15 @@
     </label>
     <input type="checkbox" id="menu-toggle">
     <nav>
-    
+
       <div>
-    <img src="images/logo-bookmark.svg" alt="logo">
-    <!-- Botón cancelar como label -->
-    <label for="menu-toggle" class="close">
-      <img src="images/icon-close.svg" alt="cancel">
-    </label>
-  </div>
-      
+        <img src="images/logo-bookmark.svg" alt="logo">
+        <!-- Botón cancelar como label -->
+        <label for="menu-toggle" class="close">
+          <img src="images/icon-close.svg" alt="cancel">
+        </label>
+      </div>
+
       <hr>
       <a href="#">FEATURES</a>
       <hr>
@@ -40,15 +42,68 @@
     </nav>
   </header>
   <main>
-   
-    <div class="first-feature"> 
-    <img src="images/illustration-hero.svg" alt="first-feature">
+
+    <div class="first-feature">
+      <img src="images/illustration-hero.svg" alt="first-feature">
     </div>
 
     <div class="first-feature">
-    <h1>A SIMPLE BOOKMARK MANAGER</h1>
-    <p>A clean and simple interface to organize<br> your favourite websites. Open a new<br> browser tab and see your sites load<br> instantly. Try it for free.</p>
-    <button class="chrome-button">Get it on Chrome</button> <button class="firefox-button">Get it on Firefox</button>
+      <h1>A SIMPLE BOOKMARK MANAGER</h1>
+      <p>A clean and simple interface to organize<br> your favourite websites. Open a new<br> browser tab and see your
+        sites load<br> instantly. Try it for free.</p>
+      <button class="chrome-button">Get it on Chrome</button> <button class="firefox-button">Get it on Firefox</button>
+    </div>
+
+    <div class="features">
+
+      <h2>Features</h2>
+      <p> Our aim is to make it quick and easy for you<br> to access your favourite websites. Your<br> bookmarks sync
+        between your devices so<br> you can access them on the go.</p>
+
+      <section class="tabs-section">
+        <hr>
+        <input type="radio" name="tabs" id="simpleBookmarking" checked>
+        <label for="simpleBookmarking">Simple Bookmarking</label>
+        <hr>
+        <input type="radio" name="tabs" id="speedySearching">
+        <label for="speedySearching">Speedy Searching</label>
+        <hr>
+        <input type="radio" name="tabs" id="easySharing">
+        <label for="easySharing">Easy Sharing</label>
+        <hr>
+        
+        <div class="tab-content" id="firstOptionContent">
+
+          <img src="images/illustration-features-tab-1.svg" alt="simple bookmarking">
+          <h3> Bookmark in one click</h3>
+          <p> Organize your bookmarks however you like.<br>Our simple drag-and-drop interface gives<br> you complete
+            control over how you manage<br> your favourite sites.</p>
+
+        </div>
+
+        <div class="tab-content" id="content-speedy">
+          <img src="images/illustration-features-tab-2.svg" alt="speedy searching">
+          <h3>Intelligent Search</h3>
+          <p>
+            Our powerfull search feature will help you find saved<br>
+            sites in no time at all. No need o trawl through all of<br>
+            your bookmarks.
+          </p>
+        </div>
+        
+        <div class="tab-content" id="content-easy">
+          <img src="images/illustration-features-tab-3.svg" alt="easy sharing">
+          <h3>Share your bookmarks</h3>
+          <p>
+            Easily share your bookmarks and collectons with<br>
+            others. Create a shareable link that you can send at<br>
+            the click of a button.
+          </p>
+        </div>
+
+      </section>
+
+
     </div>
 
 
@@ -58,4 +113,5 @@
 
   </main>
 </body>
+
 </html>
