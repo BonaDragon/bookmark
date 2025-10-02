@@ -8,6 +8,10 @@ body {
 
 @media (max-width: 768px) {
 
+  p {
+
+    color: #7d7d7d;
+  }
   /* HEADER MENU*/
   header {
     display: flex;
@@ -17,19 +21,19 @@ body {
     background: white;
     margin-right: 30px;
     margin-left: 30px;
-    
+
   }
 
   .logo img {
     width: 150px;
     height: 25px;
-    
+
 
   }
 
   #menu-toggle {
     display: none;
-    
+
   }
 
   .menu-icon {
@@ -132,7 +136,7 @@ body {
 
   }
 
-  .first-feature img{
+  .first-feature img {
 
     margin-top: 50px;
     width: 450px;
@@ -140,108 +144,141 @@ body {
 
   }
 
-  .first-feature h1 { 
+  .first-feature h1 {
 
     color: #323232;
 
   }
 
-  .first-feature p { 
+  .first-feature p {
 
-    color: #7d7d7d;
     margin-bottom: 25px;
   }
 
- .chrome-button { 
+  .chrome-button {
 
-  color: white;
-  padding: 15px;
-  border: none;
-  background-color: rgb(87, 107, 255);
-  border-radius: 5px;
-  font-size: 15px;
-  margin-right: 5px;
-  
- }
+    color: white;
+    padding: 15px;
+    border: none;
+    background-color: rgb(87, 107, 255);
+    border-radius: 5px;
+    font-size: 15px;
+    margin-right: 5px;
 
- .firefox-button { 
+  }
 
-  color: rgb(0, 0, 0);
-  padding: 15px;
-  border: none;
-  background-color: rgb(255, 255, 255);
-  border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  font-size: 15px;
-  margin-left: 5px;
- 
- }
+  .firefox-button {
 
- /* FEATURES SECTION */
- 
- .features {
+    color: rgb(0, 0, 0);
+    padding: 15px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 15px;
+    margin-left: 5px;
 
-  margin-top: 100px;
+  }
 
- }
+  /* FEATURES SECTION */
 
- .features p {
+  .features {
 
-    color: #7d7d7d;
+    margin-top: 100px;
+
+  }
+
+  .features p {
+
     margin-bottom: 25px;
- }
+  }
 
 
- .tabs-section label { 
+  .tabs-section label {
 
-  font-size: 20px;
-  color: #7d7d7d;
+    font-size: 20px;
+    color: #7d7d7d;
 
- }
+  }
 
- input[type="radio"] { 
+  input[type="radio"] {
 
-  display: none;
- }
+    display: none;
+  }
 
- .tab-content { 
+  .tab-content {
 
-  display: none;
-  margin-top: 3rem;
- }
+    display: none;
+    margin-top: 3rem;
+  }
 
- input[type="radio"]:checked + label {
+  input[type="radio"]:checked+label {
 
-  border-bottom: 3px solid orange;
-  color: #252B46;
-  padding-bottom: 7px;
+    border-bottom: 3px solid orange;
+    color: #252B46;
+    padding-bottom: 7px;
 
- }
+  }
 
- #simpleBookmarking:checked~#firstOptionContent,
- #speedySearching:checked~#content-speedy, 
- #easySharing:checked~#content-easy { 
+  #simpleBookmarking:checked~#firstOptionContent,
+  #speedySearching:checked~#content-speedy,
+  #easySharing:checked~#content-easy {
 
-   display: block;
- }
+    display: block;
+  }
 
- .tab-content img { 
+  .tab-content img {
 
-  width: 400px;
+    width: 400px;
     height: auto;
- }
+  }
 
- .tab-content h3 { 
+  .tab-content h3 {
 
-   font-size: 25px;
-   
- }
+    font-size: 25px;
 
- 
+  }
+
+  .download-section h2 {
+
+    margin-top: 7rem;
+  }
+
+  
+
+  .card {
+
+    background: white;
+    width: 280px;
+    padding: 24px 20px;
+    text-align: center;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-bottom: 2rem;
+  }
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+
+.card button { 
+
+  border-radius: 5px;
+  border: none;
+  padding: 15px 40px 15px 40px;
+  margin-top: 1rem;
+  color: white;
+  background-color: rgb(97, 100, 255);
 
 }
 
-@media (min-width: 1024px) {
-
-
 }
+
+@media (min-width: 1024px) {}
