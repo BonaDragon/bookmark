@@ -575,7 +575,7 @@ body {
 
   }
 
-  .tab-content button { 
+  .tab-content button {
 
     color: white;
     padding: 15px;
@@ -615,9 +615,55 @@ body {
 
   /* DOWNLOAD SECTION */
 
-  .download-section { 
+  .download-section {
 
     text-align: center;
+    margin-bottom: 4rem;
+  }
+
+
+  .card {
+
+    background: white;
+    width: 260px;
+    padding: 50px 20px 60px 20px;
+    text-align: center;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-bottom: 2rem;
+  }
+
+  .card-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+
+  }
+
+
+  .card button {
+
+    border-radius: 5px;
+    border: none;
+    padding: 15px 40px 15px 40px;
+    margin-top: 1rem;
+    color: white;
+    background-color: rgb(97, 100, 255);
+
+  }
+
+  .card-container .card:nth-child(2) {
+
+    margin-top: 5rem;
+  }
+
+
+  .card-container .card:nth-child(3) {
+    margin-top: 9rem;
   }
 
 }
