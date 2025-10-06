@@ -4,9 +4,12 @@ body {
 
 }
 
-
-
 @media (max-width: 768px) {
+
+  .desktop-nav {
+
+    display: none;
+  }
 
   p {
 
@@ -51,7 +54,7 @@ body {
     height: 3px;
     background: #252B46;
     border-radius: 2px;
-    transition: 0.3s;
+
   }
 
   nav {
@@ -69,10 +72,6 @@ body {
 
   }
 
-  nav div {
-
-    display: flex;
-  }
 
   nav a {
     text-decoration: none;
@@ -133,8 +132,6 @@ body {
   main div {
 
     display: block;
-    justify-content: center;
-    align-items: center;
     text-align: center;
 
   }
@@ -147,13 +144,13 @@ body {
 
   }
 
-  .first-feature h1 {
+  .hero-text h1 {
 
     color: #323232;
 
   }
 
-  .first-feature p {
+  .hero-text p {
 
     margin-bottom: 25px;
   }
@@ -184,6 +181,11 @@ body {
   }
 
   /* FEATURES SECTION */
+
+  .tab-labels-desktop {
+
+    display: none;
+  }
 
   .features {
 
@@ -216,13 +218,11 @@ body {
 
   }
 
-  input[type="radio"]:checked+label {
+  .tab-content button {
 
-    border-bottom: 3px solid orange;
-    color: #252B46;
-    padding-bottom: 14px;
-
+    display: none;
   }
+
 
   #simpleBookmarking:checked~#firstOptionContent,
   #speedySearching:checked~#content-speedy,
@@ -405,14 +405,219 @@ body {
 
 }
 
-/* DESKTOP STYLES*/
+/* DESKTOP STYLES***********************************************/
 
 @media (min-width: 1024px) {
 
 
   .menu-icon,
   #menu-toggle,
-  header nav {
-    display: none !important;
+  .mobile-nav {
+    display: none;
   }
+
+  p {
+
+    color: rgb(172, 172, 172);
+  }
+
+  header {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: white;
+    margin: 0 auto;
+  }
+
+  .desktop-nav {
+
+    display: flex;
+
+  }
+
+  .logo img {
+
+    margin-left: 15rem;
+    width: 140px;
+    height: auto;
+
+  }
+
+  .desktop-nav ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin-right: 19rem;
+
+  }
+
+  .desktop-nav a {
+
+    text-decoration: none;
+    color: rgb(63, 63, 63);
+    font-size: 12px;
+  }
+
+  .desktop-nav ul li a.login-button {
+
+    font-size: 9px;
+    color: rgba(255, 255, 255, 0.742);
+    border: none;
+    background-color: rgb(255, 77, 64);
+    border-radius: 3px;
+    padding: 9px 22px 9px 22px;
+    font-weight: bold;
+
+  }
+
+
+  /*HERO SECTION DESKTOP */
+
+  .hero-section {
+
+    display: flex;
+    margin-left: 13rem;
+    align-items: center;
+    gap: 4rem;
+
+  }
+
+  .hero-text {
+
+    order: 1;
+    margin-left: 3rem;
+  }
+
+  .hero-text h1 span {
+
+    font-size: 40px;
+    display: block;
+  }
+
+  .hero-img {
+
+    order: 2;
+    margin-top: 2rem;
+
+  }
+
+  .hero-img img {
+
+    width: 600px;
+    height: auto;
+  }
+
+  .chrome-button {
+
+    color: white;
+    padding: 15px;
+    border: none;
+    background-color: rgb(87, 107, 255);
+    border-radius: 5px;
+    font-size: 15px;
+    margin-right: 5px;
+
+  }
+
+  .firefox-button {
+
+    color: rgb(0, 0, 0);
+    padding: 15px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 15px;
+    margin-left: 5px;
+
+  }
+
+
+  .features {
+
+    margin-top: 2rem;
+    text-align: center;
+
+
+  }
+
+  .intro-features {
+
+    margin-bottom: 4rem;
+  }
+
+
+
+  input[type="radio"] {
+
+    display: none;
+  }
+
+  .tab-content {
+
+    display: none;
+    margin-top: 3rem;
+    margin-bottom: 6rem;
+
+  }
+
+  .tab-content div {
+
+    text-align: justify;
+    align-content: center;
+  }
+
+  .tab-content h3 {
+
+    font-size: 30px;
+
+  }
+
+  .tab-content button { 
+
+    color: white;
+    padding: 15px;
+    border: none;
+    background-color: rgb(87, 107, 255);
+    border-radius: 5px;
+    font-size: 15px;
+    margin-right: 5px;
+  }
+
+
+  #simpleBookmarking:checked~#firstOptionContent,
+  #speedySearching:checked~#content-speedy,
+  #easySharing:checked~#content-easy {
+
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+
+  }
+
+  .tab-labels-mobile {
+
+    display: none;
+  }
+
+  .tab-labels-desktop label {
+
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  hr {
+    margin-top: 2rem;
+    width: 38rem;
+  }
+
+  /* DOWNLOAD SECTION */
+
+  .download-section { 
+
+    text-align: center;
+  }
+
 }
