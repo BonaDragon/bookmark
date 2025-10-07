@@ -86,7 +86,6 @@ body {
     border: 2px solid white;
     border-radius: 5px;
     padding: 10px 130px 10px 130px;
-    /* top right bottom left */
   }
 
   hr {
@@ -285,6 +284,11 @@ body {
 
   /*FAQs QUESTIONS SECTION */
 
+  .first-hr-faqs {
+
+    display: none;
+  }
+
   .asked-questions-title {
     margin-top: 4rem;
 
@@ -313,9 +317,6 @@ body {
     text-align: center;
     margin-top: 1rem;
     margin-left: 7rem;
-
-
-
 
   }
 
@@ -618,7 +619,8 @@ body {
   .download-section {
 
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
+
   }
 
 
@@ -663,7 +665,190 @@ body {
 
 
   .card-container .card:nth-child(3) {
-    margin-top: 9rem;
+    margin-top: 10rem;
+  }
+
+
+  /* FAQs SECTION DESKTOP*/
+
+
+  .FAQs-section {
+    text-align: center;
+
+  }
+
+  .asked-questions-title {
+    margin-top: 4rem;
+
+  }
+
+  .questions-container {
+
+    max-width: 550px;
+    width: 100%;
+    margin: 50px auto;
+    text-align: left;
+
+  }
+
+  .questions-container hr {
+
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+    width: 35rem;
+
+  }
+
+  .more-info-btn {
+
+    display: inline-block;
+    background: #4b5eff;
+    color: white;
+    padding: 15px 20px 15px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 1rem;
+    margin-left: 14rem;
+
+
+  }
+
+  .questions-container summary::-webkit-details-marker {
+    display: none;
+  }
+
+
+  .questions-container summary {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    font-size: 1rem;
+    border-radius: 5px;
+  }
+
+  .questions-container summary::after {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid #4f46e5;
+    border-bottom: 2px solid #4f46e5;
+    transform: rotate(45deg);
+    transition: transform 0.3s;
+    margin-left: 10px;
+  }
+
+  .questions-container details[open] summary::after {
+    transform: rotate(225deg);
+  }
+
+  /* SIGN UP SECTION DESKTOP */
+
+  .sign-up-section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+  background-color: #4b5eff;
+  color: white;
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+  align-items: center;
+  text-align: center;
+}
+
+.sign-up-section p {
+  color: white;
+}
+
+.sign-up-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 1rem;
+  width: 100%;
+  max-width: 500px; 
+}
+
+.sign-up-button input {
+  flex: 1;
+  padding: 10px;
+  padding-left: 1rem;
+  padding-right: 4rem;
+  border-radius: 4px;
+  border: none;
+  text-align: left;
+}
+
+
+.sign-up-button button {
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  background-color: rgb(253, 69, 28);
+  color: #ffffff;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+
+ /* FOOTER */
+
+  footer {
+
+    display: flex;
+    background-color: #33323d;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 1rem;
+  
+
+  }
+
+  .links {
+
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    
+
+  }
+
+  .links img {
+
+    
+    width: 200px;
+    height: auto;
+    color: #ffffff;
+    filter: brightness(0) invert(1);
+
+
+  }
+
+
+  .image-links {
+    
+    display: flex;
+  
+  }
+
+  .image-links img {
+
+    width: 20px;
+    height: auto;
+    margin-right: 2rem;
+  }
+
+  .links a { 
+    
+    margin-left: 0.5rem;
+    color: #b7b7b7;
   }
 
 }
