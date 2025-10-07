@@ -45,21 +45,19 @@ body {
   }
 
   .menu-icon {
-    cursor: pointer;
-    width: 25px;
-    height: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  .menu-icon span {
     display: block;
-    height: 3px;
-    background: #252B46;
-    border-radius: 2px;
-
+    width: 25px;
+    height: auto;
+    cursor: pointer;
   }
+
+  .menu-icon img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+
 
   nav {
     position: fixed;
@@ -250,7 +248,7 @@ body {
 
   .tab-labels-mobile hr {
 
-    margin-top: -0.20rem;
+    margin-top: -0.10rem;
   }
 
 
@@ -267,9 +265,11 @@ body {
 
   }
 
+  /* MOBILE DOWNLOAD SECTION*/
+
   .download-section h2 {
 
-    margin-top: 7rem;
+    margin-top: 4rem;
   }
 
 
@@ -278,13 +278,22 @@ body {
 
     background: white;
     width: 280px;
+    height: auto;
     padding: 24px 20px;
     text-align: center;
     border-radius: 16px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
     margin-bottom: 2rem;
   }
+
+  .logo-card {
+
+   margin-top: 3rem;
+   width: 100%;
+   max-width: 150px;
+  
+  }
+
 
   .card-container {
     display: flex;
@@ -307,77 +316,64 @@ body {
 
   }
 
-  /*FAQs QUESTIONS SECTION */
+  /* FAQs SECTION MOBILE */
 
   .first-hr-faqs {
-
     display: none;
   }
 
   .asked-questions-title {
     margin-top: 4rem;
-
+    text-align: center;
   }
 
   .questions-container {
-
-    max-width: 350px;
+    max-width: 70%;
     width: 100%;
     margin: 30px auto;
     text-align: left;
-
-
-  }
-
-  .more-info-btn {
-
-    display: inline-block;
-    background: #4b5eff;
-    color: white;
-    padding: 15px 20px 15px 20px;
-    border: none;
-    border-radius: 8px;
-    font-size: 15px;
-    text-decoration: none;
-    text-align: center;
-    margin-top: 1rem;
-    margin-left: 7rem;
-
   }
 
   .questions-container summary {
-    cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-weight: bold;
     font-size: 1rem;
     border-radius: 5px;
+    cursor: pointer;
   }
 
-  .questions-container summary::after {
-    content: "";
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    border-right: 2px solid #4f46e5;
-    border-bottom: 2px solid #4f46e5;
-    transform: rotate(45deg);
+  .arrow-icon {
+    width: 16px;
+    height: 12px;
     transition: transform 0.3s;
-    margin-left: 10px;
   }
 
-  .questions-container details[open] summary::after {
-    transform: rotate(225deg);
-    border-right: 2px solid #ff9b04;
-    border-bottom: 2px solid #ff9b04;
+  details[open] .arrow-icon {
+    transform: rotate(180deg);
+    filter: brightness(0) saturate(100%) invert(47%) sepia(85%) saturate(2757%) hue-rotate(358deg) brightness(102%) contrast(105%);
   }
 
   .questions-container hr {
-
-    width: 22rem;
-
+    width: 100%;
+    max-width: 22rem;
   }
+
+  .more-info-btn {
+    display: block;
+    background: #4b5eff;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    text-decoration: none;
+    text-align: center;
+    margin: 1.5rem auto 0 auto;
+    max-width: 200px;
+  }
+
 
   /* SIGN UP SECTION */
 
@@ -609,6 +605,7 @@ body {
 
   .chrome-button:hover {
 
+    cursor: pointer;
     background-color: white;
     color: rgb(74, 74, 255);
     box-shadow: inset 0 0 0 1px rgb(74, 74, 255);
@@ -617,6 +614,7 @@ body {
 
   .firefox-button:hover {
 
+    cursor: pointer;
     color: rgb(0, 0, 0);
     box-shadow: inset 0 0 0 1px rgb(0, 0, 0);
 
@@ -670,6 +668,7 @@ body {
 
   .tab-content button {
 
+    cursor: pointer;
     color: white;
     padding: 15px;
     border: none;
@@ -721,8 +720,8 @@ body {
   }
 
   hr {
-    width: 38rem;
-    margin-top: -0.20rem;
+    width: 34rem;
+    margin-top: -0.10rem;
   }
 
 
@@ -764,6 +763,7 @@ body {
 
   .card button {
 
+    cursor: pointer;
     border-radius: 5px;
     border: none;
     padding: 15px 40px 15px 40px;
@@ -785,6 +785,7 @@ body {
 
   .card button:hover {
 
+    cursor: pointer;
     background-color: white;
     color: rgb(74, 74, 255);
     box-shadow: inset 0 0 0 1px rgb(74, 74, 255);
@@ -792,42 +793,34 @@ body {
   }
 
 
-
-  /* FAQs SECTION DESKTOP*/
-
+  /* FAQs SECTION DESKTOP */
   .FAQs-section {
     text-align: center;
-
   }
 
   .asked-questions-title {
     margin-top: 4rem;
-
   }
 
   .questions-container {
-
     max-width: 550px;
     width: 100%;
     margin: 50px auto;
     text-align: left;
-
   }
 
   .questions-container hr {
-
     margin-top: 1.2rem;
     margin-bottom: 1.2rem;
     width: 35rem;
-
   }
 
   .more-info-btn {
-
+    cursor: pointer;
     display: inline-block;
     background: #4b5eff;
     color: white;
-    padding: 15px 20px 15px 20px;
+    padding: 15px 20px;
     border: none;
     border-radius: 8px;
     font-size: 15px;
@@ -835,8 +828,6 @@ body {
     text-align: center;
     margin-top: 1rem;
     margin-left: 14rem;
-
-
   }
 
   .questions-container summary {
@@ -849,34 +840,26 @@ body {
     border-radius: 5px;
   }
 
-  .questions-container summary::after {
-    content: "";
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    border-right: 2px solid #4f46e5;
-    border-bottom: 2px solid #4f46e5;
-    transform: rotate(45deg);
-    transition: transform 0.3s;
-    margin-left: 10px;
-  }
-
-  .questions-container details[open] summary::after {
-    transform: rotate(225deg);
-    border-right: 2px solid #ff9b04;
-    border-bottom: 2px solid #ff9b04;
-  }
-
   .questions-container summary:hover {
-
     color: #ff9b04;
   }
 
+  .arrow-icon {
+    width: 18px;
+    height: 12px;
+    transition: transform 0.3s;
+  }
 
+  details[open] .arrow-icon {
+    transform: rotate(180deg);
+    filter: brightness(0) saturate(100%) invert(47%) sepia(85%) saturate(2757%) hue-rotate(358deg) brightness(102%) contrast(105%);
+
+  }
 
   /* SIGN UP SECTION DESKTOP */
 
   .sign-up-section {
+
     display: flex;
     flex-direction: column;
     margin-top: 5rem;
@@ -893,6 +876,7 @@ body {
   }
 
   .sign-up-button {
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -914,6 +898,7 @@ body {
 
 
   .sign-up-button button {
+    cursor: pointer;
     border: none;
     border-radius: 4px;
     padding: 10px 20px;
@@ -994,14 +979,15 @@ body {
 
   .links a:hover {
 
-  color: orange;
-}
+    color: orange;
+    cursor: pointer;
+  }
 
-.image-links img:hover {
+  .image-links img:hover {
 
-  filter: brightness(0) saturate(100%) invert(47%) sepia(85%) saturate(2757%) hue-rotate(358deg) brightness(102%) contrast(105%);
-
-}
+    filter: brightness(0) saturate(100%) invert(47%) sepia(85%) saturate(2757%) hue-rotate(358deg) brightness(102%) contrast(105%);
+    cursor: pointer;
+  }
 
 
 }
