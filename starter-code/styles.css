@@ -4,6 +4,79 @@ body {
 
 }
 
+
+
+.desktop-nav a:hover {
+
+  color: rgb(255, 111, 0);
+}
+
+
+.desktop-nav a.login-button:hover {
+  background-color: #faf9f9;
+  box-shadow: inset 0 0 0 1px orange;
+  color: rgb(255, 134, 4);
+}
+
+.chrome-button:hover {
+
+  background-color: white;
+  color: rgb(74, 74, 255);
+  box-shadow: inset 0 0 0 1px rgb(74, 74, 255);
+
+}
+
+.firefox-button:hover {
+
+  color: rgb(0, 0, 0);
+  box-shadow: inset 0 0 0 1px rgb(0, 0, 0);
+
+}
+
+
+.card button:hover {
+
+  background-color: white;
+  color: rgb(74, 74, 255);
+  box-shadow: inset 0 0 0 1px rgb(74, 74, 255);
+
+
+
+}
+
+.questions-container summary:hover {
+
+  color: #ff9b04;
+}
+
+
+
+.sign-up-button button:hover {
+
+  background-color: #faf9f9;
+  color: rgb(255, 134, 4);
+  box-shadow: inset 0 0 0 1px rgb(255, 134, 4);
+
+
+}
+
+.tab-labels-desktop label:hover {
+
+  color: rgb(255, 111, 0);
+}
+
+
+
+.links a:hover {
+
+  color: orange;
+}
+
+.image-links img:hover {
+
+  filter: brightness(0) saturate(100%) invert(47%) sepia(85%) saturate(2757%) hue-rotate(358deg) brightness(102%) contrast(105%);
+}
+
 @media (max-width: 768px) {
 
   .desktop-nav {
@@ -124,8 +197,6 @@ body {
     height: 15px;
   }
 
-
-
   /*HERO SECTION*/
 
   main div {
@@ -210,6 +281,11 @@ body {
     display: none;
   }
 
+  .tab-labels-mobile label:hover {
+    color: rgb(255, 111, 0);
+
+  }
+
   .tab-content {
 
     display: none;
@@ -228,6 +304,15 @@ body {
   #easySharing:checked~#content-easy {
 
     display: block;
+  }
+
+  #simpleBookmarking:checked~.tab-labels-mobile label[for="simpleBookmarking"],
+  #speedySearching:checked~.tab-labels-mobile label[for="speedySearching"],
+  #easySharing:checked~.tab-labels-mobile label[for="easySharing"] {
+
+    border-bottom: 3px solid orange;
+
+
   }
 
   .tab-content img {
@@ -408,7 +493,7 @@ body {
 
 /* DESKTOP STYLES***********************************************/
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
 
 
   .menu-icon,
@@ -474,6 +559,7 @@ body {
   }
 
 
+
   /*HERO SECTION DESKTOP */
 
   .hero-section {
@@ -536,6 +622,10 @@ body {
   }
 
 
+
+
+  /*FEATURES SECTION DESKTOP*/
+
   .features {
 
     margin-top: 2rem;
@@ -556,6 +646,7 @@ body {
     display: none;
   }
 
+
   .tab-content {
 
     display: none;
@@ -566,7 +657,7 @@ body {
 
   .tab-content div {
 
-    text-align: justify;
+    text-align: left;
     align-content: center;
   }
 
@@ -598,6 +689,14 @@ body {
 
   }
 
+  #simpleBookmarking:checked~.tab-labels-desktop label[for="simpleBookmarking"],
+  #speedySearching:checked~.tab-labels-desktop label[for="speedySearching"],
+  #easySharing:checked~.tab-labels-desktop label[for="easySharing"] {
+    border-bottom: 3px solid orange;
+
+
+  }
+
   .tab-labels-mobile {
 
     display: none;
@@ -605,14 +704,19 @@ body {
 
   .tab-labels-desktop label {
 
-    margin-left: 2rem;
-    margin-right: 2rem;
+    display: inline-block;
+    width: 180px;
+    text-align: center;
+    cursor: pointer;
+    padding-bottom: 2rem;
+
   }
 
   hr {
-    margin-top: 2rem;
     width: 38rem;
+    margin-top: -0.20rem;
   }
+
 
   /* DOWNLOAD SECTION */
 
@@ -669,8 +773,8 @@ body {
   }
 
 
-  /* FAQs SECTION DESKTOP*/
 
+  /* FAQs SECTION DESKTOP*/
 
   .FAQs-section {
     text-align: center;
@@ -716,17 +820,12 @@ body {
 
   }
 
-  .questions-container summary::-webkit-details-marker {
-    display: none;
-  }
-
-
   .questions-container summary {
     cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-weight: 500;
+    font-weight: bold;
     font-size: 1rem;
     border-radius: 5px;
   }
@@ -745,59 +844,63 @@ body {
 
   .questions-container details[open] summary::after {
     transform: rotate(225deg);
+    border-right: 2px solid #ff9b04;
+    border-bottom: 2px solid #ff9b04;
   }
+
+
 
   /* SIGN UP SECTION DESKTOP */
 
   .sign-up-section {
-  display: flex;
-  flex-direction: column;
-  margin-top: 5rem;
-  background-color: #4b5eff;
-  color: white;
-  padding-top: 3rem;
-  padding-bottom: 5rem;
-  align-items: center;
-  text-align: center;
-}
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+    background-color: #4b5eff;
+    color: white;
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+    align-items: center;
+    text-align: center;
+  }
 
-.sign-up-section p {
-  color: white;
-}
+  .sign-up-section p {
+    color: white;
+  }
 
-.sign-up-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  margin-top: 1rem;
-  width: 100%;
-  max-width: 500px; 
-}
+  .sign-up-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 1rem;
+    width: 100%;
+    max-width: 500px;
+  }
 
-.sign-up-button input {
-  flex: 1;
-  padding: 10px;
-  padding-left: 1rem;
-  padding-right: 4rem;
-  border-radius: 4px;
-  border: none;
-  text-align: left;
-}
-
-
-.sign-up-button button {
-  border: none;
-  border-radius: 4px;
-  padding: 10px 20px;
-  background-color: rgb(253, 69, 28);
-  color: #ffffff;
-  font-weight: bold;
-  white-space: nowrap;
-}
+  .sign-up-button input {
+    flex: 1;
+    padding: 10px;
+    padding-left: 1rem;
+    padding-right: 4rem;
+    border-radius: 4px;
+    border: none;
+    text-align: left;
+  }
 
 
- /* FOOTER */
+  .sign-up-button button {
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    background-color: rgb(253, 69, 28);
+    color: #ffffff;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+
+
+  /* FOOTER */
 
   footer {
 
@@ -807,7 +910,8 @@ body {
     align-items: center;
     color: white;
     padding: 1rem;
-  
+
+
 
   }
 
@@ -816,14 +920,16 @@ body {
     display: flex;
     align-items: center;
     gap: 2rem;
-    
+    margin-left: 10rem;
+
+
 
   }
 
   .links img {
 
-    
-    width: 200px;
+
+    width: 150px;
     height: auto;
     color: #ffffff;
     filter: brightness(0) invert(1);
@@ -833,9 +939,10 @@ body {
 
 
   .image-links {
-    
+
     display: flex;
-  
+    margin-right: 13rem;
+
   }
 
   .image-links img {
@@ -845,10 +952,12 @@ body {
     margin-right: 2rem;
   }
 
-  .links a { 
-    
+  .links a {
+
     margin-left: 0.5rem;
     color: #b7b7b7;
+
   }
+
 
 }
