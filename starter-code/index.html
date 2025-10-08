@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bookmark Nav</title>
-  <link rel="stylesheet" href="styles.css">
+  
+  <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
@@ -26,8 +27,8 @@
         <li><a href="#">FEATURES</a></li>
         <li><a href="#">PRICING</a></li>
         <li><a href="#">CONTACT</a></li>
-        <li><a class="login-button" href="#">LOGIN</a></li>
       </ul>
+       <li><button class="btn-secondary" href="#">LOGIN</button></li>
     </nav>
 
     <nav class="mobile-nav">
@@ -58,8 +59,8 @@
       <div class="hero-text">
         <h1>A SIMPLE BOOKMARK MANAGER</h1>
         <p>A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.</p>
-        <button class="chrome-button">Get it on Chrome</button>
-        <button class="firefox-button">Get it on Firefox</button>
+        <button class="btn-primary">Get it on Chrome</button>
+        <button class="btn-firefox">Get it on Firefox</button>
       </div>
     </section>
 
@@ -114,7 +115,7 @@
           <div>
             <h3>Share your bookmarks</h3>
             <p>Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.</p>
-            <button>More Info</button>
+            <button class="btn-moreinfo">More Info</button>
           </div>
         </div>
       </div>
@@ -132,7 +133,7 @@
           <h2>Add to Chrome</h2>
           <p>Minimum version 62</p>
           <img src="images/bg-dots.svg" alt="">
-          <button class="btn">Add & Install Extension</button>
+          <button class="btn-primary">Add & Install Extension</button>
         </div>
 
         <div class="card">
@@ -140,7 +141,7 @@
           <h2>Add to Firefox</h2>
           <p>Minimum version 55</p>
           <img src="images/bg-dots.svg" alt="">
-          <button class="btn">Add & Install Extension</button>
+          <button class="btn-primary">Add & Install Extension</button>
         </div>
 
         <div class="card">
@@ -148,7 +149,7 @@
           <h2>Add to Opera</h2>
           <p>Minimum version 46</p>
           <img src="images/bg-dots.svg" alt="">
-          <button class="btn">Add & Install Extension</button>
+          <button class="btn-primary">Add & Install Extension</button>
         </div>
       </div>
     </section>
@@ -193,7 +194,7 @@
           <p>We support most Chromium browsers with similar features.</p>
         </details>
         <hr>
-        <a href="#" class="more-info-btn">More Info</a>
+        <button href="#" class="btn-moreinfo">More Info</button>
       </div>
     </section>
 
@@ -204,7 +205,7 @@
         <form>
           <div class="sign-up-button">
             <input type="email" id="email" placeholder="Enter your email address" required>
-            <button type="submit">Contact Us</button>
+            <button class="btn-secondary" type="submit">Contact Us</button>
           </div>
         </form>
       </div>

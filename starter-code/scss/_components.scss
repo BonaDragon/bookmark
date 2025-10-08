@@ -1,0 +1,40 @@
+@use './variables' as v;
+@use './mixins' as m;
+
+.btn-primary {
+
+    @include m.button-base(v.$primary-button-color, v.$button-hover-color);
+}
+
+.btn-secondary {
+
+    @include m.button-base(v.$secondary-button-color, v.$button-hover-color);
+}
+
+.btn-moreinfo {
+
+    @include m.more-info-button(v.$primary-button-color);
+}
+
+.btn-firefox {
+
+    color: rgb(0, 0, 0);
+    padding: 15px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 15px;
+    margin-left: 5px;
+
+    &:hover {
+
+        cursor: pointer;
+        color: rgb(0, 0, 0);
+        box-shadow: inset 0 0 0 1px rgb(0, 0, 0);
+
+    }
+
+}
+
+
