@@ -135,6 +135,7 @@ body {
 
   }
 
+
   .hero-section img {
 
     margin-top: 50px;
@@ -151,7 +152,9 @@ body {
 
   .hero-text p {
 
-    margin-bottom: 25px;
+    margin: 0 auto 25px;
+    max-width: 350px;
+    text-align: center;
   }
 
   .chrome-button {
@@ -194,7 +197,9 @@ body {
 
   .features p {
 
-    margin-bottom: 25px;
+    margin: 0 auto 25px;
+    max-width: 350px;
+    text-align: center;
   }
 
 
@@ -272,6 +277,12 @@ body {
     margin-top: 4rem;
   }
 
+  .download-section p {
+
+    margin: 0 auto 25px;
+    max-width: 350px;
+    text-align: center;
+  }
 
 
   .card {
@@ -288,10 +299,10 @@ body {
 
   .logo-card {
 
-   margin-top: 3rem;
-   width: 100%;
-   max-width: 150px;
-  
+    margin-top: 3rem;
+    width: 100%;
+    max-width: 150px;
+
   }
 
 
@@ -325,7 +336,11 @@ body {
   .asked-questions-title {
     margin-top: 4rem;
     text-align: center;
+    margin: 0 auto 25px;
+    max-width: 350px;
+    text-align: center;
   }
+
 
   .questions-container {
     max-width: 70%;
@@ -390,6 +405,15 @@ body {
 
   .sign-up-section p {
     color: white;
+  }
+
+  .sign-up-section h2 {
+
+    margin: 0 auto 25px;
+    max-width: 350px;
+    text-align: center;
+
+
   }
 
   .sign-up-section button {
@@ -547,34 +571,38 @@ body {
   .hero-section {
 
     display: flex;
-    margin-left: 13rem;
+    margin-left: 9rem;
     align-items: center;
-    gap: 4rem;
+
 
   }
 
   .hero-text {
 
     order: 1;
-    margin-left: 3rem;
+    margin: 0 auto 25px;
+    max-width: 450px;
+
   }
 
   .hero-text h1 span {
 
     font-size: 40px;
-    display: block;
+
   }
 
   .hero-img {
 
     order: 2;
     margin-top: 2rem;
+    margin-right: 9rem;
 
   }
 
   .hero-img img {
 
-    width: 600px;
+    width: 100%;
+    max-width: 600px;
     height: auto;
   }
 
@@ -630,7 +658,12 @@ body {
     margin-top: 2rem;
     text-align: center;
 
+  }
 
+  .features p {
+
+    margin: 0 auto 25px;
+    max-width: 450px;
   }
 
   .intro-features {
@@ -658,6 +691,12 @@ body {
 
     text-align: left;
     align-content: center;
+  }
+
+  .tab-content p {
+
+
+    max-width: 350px;
   }
 
   .tab-content h3 {
@@ -737,6 +776,12 @@ body {
 
   }
 
+  .download-section p {
+
+    margin: 0 auto;
+    max-width: 500px;
+  }
+
 
   .card {
 
@@ -796,6 +841,13 @@ body {
   /* FAQs SECTION DESKTOP */
   .FAQs-section {
     text-align: center;
+
+  }
+
+  .FAQs-section p {
+
+    margin: 0 auto 25px;
+    max-width: 450px;
   }
 
   .asked-questions-title {
@@ -873,6 +925,12 @@ body {
 
   .sign-up-section p {
     color: white;
+  }
+
+  .sign-up-section h2 { 
+
+     margin: 0 auto 25px;
+    max-width: 300px;
   }
 
   .sign-up-button {
