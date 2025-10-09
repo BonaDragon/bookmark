@@ -650,122 +650,95 @@ body {
   }
 
   
+/*========================
+=      FEATURES DESKTOP  =
+========================*/
+.features {
+  margin-top: 2rem;
+  text-align: center;
 
-
-
-  /*FEATURES SECTION DESKTOP*/
-
-  .features {
-
-    margin-top: 2rem;
-    text-align: center;
-
-  }
-
-  .features p {
-
+  p {
     margin: 0 auto 25px;
     max-width: 450px;
   }
 
   .intro-features {
-
     margin-bottom: 4rem;
   }
 
-
-
   input[type="radio"] {
-
     display: none;
   }
 
+  .tabs-section {
+    .tab-content {
+      display: none;
+      margin-top: 3rem;
+      margin-bottom: 6rem;
 
-  .tab-content {
+      div {
+        text-align: left;
+        align-content: center;
+      }
 
-    display: none;
-    margin-top: 3rem;
-    margin-bottom: 6rem;
+      p {
+        max-width: 350px;
+      }
 
-  }
+      h3 {
+        font-size: 30px;
+      }
 
-  .tab-content div {
+      button {
+        cursor: pointer;
+        color: white;
+        padding: 15px;
+        border: none;
+        background-color: rgb(87, 107, 255);
+        border-radius: 5px;
+        font-size: 15px;
+        margin-right: 5px;
+      }
+    }
 
-    text-align: left;
-    align-content: center;
-  }
+    #simpleBookmarking:checked ~ #firstOptionContent,
+    #speedySearching:checked ~ #content-speedy,
+    #easySharing:checked ~ #content-easy {
+      display: flex;
+      justify-content: center;
+      gap: 100px;
+    }
 
-  .tab-content p {
+    #simpleBookmarking:checked ~ .tab-labels-desktop label[for="simpleBookmarking"],
+    #speedySearching:checked ~ .tab-labels-desktop label[for="speedySearching"],
+    #easySharing:checked ~ .tab-labels-desktop label[for="easySharing"] {
+      border-bottom: 3px solid orange;
+    }
 
+    .tab-labels-mobile {
+      display: none;
+    }
 
-    max-width: 350px;
-  }
+    .tab-labels-desktop {
+      label {
+        display: inline-block;
+        width: 180px;
+        text-align: center;
+        cursor: pointer;
+        padding-bottom: 2rem;
 
-  .tab-content h3 {
-
-    font-size: 30px;
-
-  }
-
-  .tab-content button {
-
-    cursor: pointer;
-    color: white;
-    padding: 15px;
-    border: none;
-    background-color: rgb(87, 107, 255);
-    border-radius: 5px;
-    font-size: 15px;
-    margin-right: 5px;
-  }
-
-
-  #simpleBookmarking:checked~#firstOptionContent,
-  #speedySearching:checked~#content-speedy,
-  #easySharing:checked~#content-easy {
-
-    display: flex;
-    justify-content: center;
-    gap: 100px;
-
-  }
-
-  #simpleBookmarking:checked~.tab-labels-desktop label[for="simpleBookmarking"],
-  #speedySearching:checked~.tab-labels-desktop label[for="speedySearching"],
-  #easySharing:checked~.tab-labels-desktop label[for="easySharing"] {
-    border-bottom: 3px solid orange;
-
-
-  }
-
-  .tab-labels-mobile {
-
-    display: none;
-  }
-
-
-
-  .tab-labels-desktop label {
-
-    display: inline-block;
-    width: 180px;
-    text-align: center;
-    cursor: pointer;
-    padding-bottom: 2rem;
-
-  }
-
-  .tab-labels-desktop label:hover {
-
-    color: rgb(255, 111, 0);
+        &:hover {
+          color: rgb(255, 111, 0);
+        }
+      }
+    }
   }
 
   hr {
     width: 34rem;
-    margin-top: -0.10rem;
+    margin-top: -0.1rem;
   }
-
-
+}
 
 
 

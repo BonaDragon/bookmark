@@ -1,39 +1,617 @@
-.hero-section {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 4rem 1rem;
+/*========================
+=        GLOBAL         =
+========================*/
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
-.hero-section .hero-text {
-  margin: 0 auto 25px;
-  max-width: 450px;
+body p {
+  color: #7d7d7d;
 }
-.hero-section .hero-img {
-  max-width: 400px;
-  margin: 0 auto;
+
+.features .tabs-section input[type=radio] {
+  display: none;
 }
-.hero-section .hero-img img {
-  width: 100%;
-  height: auto;
-}
-@media (min-width: 768px) {
+
+/*========================
+=      MOBILE STYLES     =
+========================*/
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: white;
+    margin: 0 30px;
+  }
+  header nav hr {
+    width: 70%;
+    border: none;
+    border-top: 1px solid #7d7d7d;
+    margin: 1rem 0;
+  }
+  header .logo img {
+    width: 200px;
+    height: auto;
+  }
+  header #menu-toggle {
+    display: none;
+  }
+  header .menu-icon {
+    display: block;
+    width: 25px;
+    cursor: pointer;
+  }
+  header .menu-icon img {
+    width: 100%;
+    display: block;
+  }
+  header nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 200px;
+    height: 100vh;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 4rem;
+    transition: 0.3s;
+  }
+  header nav a {
+    text-decoration: none;
+    color: #ffffff;
+    margin: 1rem 0;
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+  header nav a:last-of-type {
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 10px 130px;
+  }
+  header nav img {
+    margin-right: 30px;
+    filter: brightness(0) invert(1);
+    margin-bottom: 1.2rem;
+  }
+  header nav .close {
+    margin-top: 5px;
+    margin-left: 140px;
+    width: 15px;
+    height: 15px;
+  }
+  header #menu-toggle:checked ~ nav {
+    right: 0%;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(4, 9, 46, 0.877);
+  }
+  /* HERO SECTION */
   .hero-section {
-    flex-direction: row;
+    text-align: center;
+  }
+  .hero-section .hero-text h1 {
+    color: #323232;
+  }
+  .hero-section .hero-text p {
+    max-width: 350px;
+    margin: 0 auto 25px;
+  }
+  .hero-section .hero-img img {
+    width: 450px;
+    height: auto;
+    margin-top: 50px;
+  }
+  /* FEATURES */
+  .features {
+    margin-top: 100px;
+  }
+  .features h2 {
+    text-align: center;
+  }
+  .features p {
+    max-width: 350px;
+    margin: 0 auto 25px;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .features .tab-labels-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .features .tab-labels-mobile label {
+    display: block;
+    width: auto;
+    text-align: center;
+    font-size: 20px;
+    color: #7d7d7d;
+    padding-bottom: 1rem;
+    cursor: pointer;
+  }
+  .features .tab-labels-mobile hr {
+    width: 60%;
+    border: none;
+    border-top: 1px solid #7d7d7d;
+    margin-top: -1rem;
+  }
+  .features .tabs-section input[type=radio] {
+    display: none;
+  }
+  .features .tabs-section .tab-content {
+    display: none;
+    margin-top: 3rem;
+    text-align: center;
+  }
+  .features .tabs-section .tab-content img {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    display: block;
+  }
+  .features .tabs-section .tab-content h3 {
+    font-size: 25px;
+  }
+  .features .tabs-section #simpleBookmarking:checked ~ #firstOptionContent,
+  .features .tabs-section #speedySearching:checked ~ #content-speedy,
+  .features .tabs-section #easySharing:checked ~ #content-easy {
+    display: block;
+  }
+  .features .tabs-section #simpleBookmarking:checked ~ .tab-labels-mobile label[for=simpleBookmarking],
+  .features .tabs-section #speedySearching:checked ~ .tab-labels-mobile label[for=speedySearching],
+  .features .tabs-section #easySharing:checked ~ .tab-labels-mobile label[for=easySharing] {
+    border-bottom: 3px solid orange;
+  }
+  .features .tab-labels-desktop {
+    display: none;
+  }
+  .features .tabs-divider {
+    display: none;
+  }
+  .features .btn-moreinfo {
+    display: none;
+  }
+  /* DOWNLOAD SECTION */
+  .download-section h2 {
+    margin-top: 4rem;
+    text-align: center;
+  }
+  .download-section p {
+    max-width: 350px;
+    margin: 0 auto 25px;
+    text-align: center;
+  }
+  .download-section .card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .download-section .card-container .card {
+    width: 280px;
+    padding: 24px 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    text-align: center;
+  }
+  .download-section .card-container .card .logo-card {
+    width: 100%;
+    max-width: 150px;
+    margin-top: 3rem;
+  }
+  .download-section .card-container .card button {
+    margin-top: 1.5rem;
+  }
+  /* FAQ SECTION */
+  .FAQs-section {
+    text-align: center;
+  }
+  .FAQs-section p {
+    max-width: 350px;
+    margin: 0 auto 25px;
+  }
+  .FAQs-section .questions-container {
+    max-width: 70%;
+    margin: 30px auto;
+  }
+  .FAQs-section .questions-container summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .FAQs-section .questions-container .arrow-icon {
+    width: 16px;
+    height: 12px;
+    transition: transform 0.3s;
+  }
+  .FAQs-section .questions-container details[open] .arrow-icon {
+    transform: rotate(180deg);
+  }
+  .FAQs-section .questions-container hr {
+    width: 100%;
+    max-width: 22rem;
+    margin: 1rem 0;
+  }
+  .FAQs-section .questions-container details p {
     text-align: left;
-    justify-content: center;
+    max-width: 100%;
+    margin-top: 0.8rem;
+  }
+  /* SIGN-UP SECTION */
+  .sign-up-section {
+    display: flex;
+    padding: 2rem 0 4rem;
+    background-color: #4b5eff;
+    color: white;
+    text-align: center;
+  }
+  .sign-up-section p {
+    color: white;
+  }
+  .sign-up-section h2 {
+    max-width: 350px;
+    margin: 0 auto 25px;
+  }
+  .sign-up-section input {
+    width: 70%;
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+  }
+  .sign-up-section button {
+    margin-top: 1rem;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 140px 10px 140px;
+    background-color: rgb(253, 69, 28);
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  /* FOOTER */
+  footer {
+    background-color: #33323d;
+    color: white;
+    padding-bottom: 3rem;
+  }
+  footer .links {
+    display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 2rem;
   }
-  .hero-section .hero-img {
-    order: 2;
-    max-width: 600px;
-    margin: 0;
+  footer .links img {
+    width: 200px;
+    filter: brightness(0) invert(1);
+    margin: 2rem 0;
+  }
+  footer .links a {
+    color: #b7b7b7;
+  }
+  footer .links a:hover {
+    color: orange;
+  }
+  footer .image-links {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  footer .image-links img {
+    width: 20px;
+    cursor: pointer;
+  }
+  footer .image-links img:hover {
+    filter: brightness(0) saturate(100%) invert(47%) sepia(85%) saturate(2757%) hue-rotate(358deg) brightness(102%) contrast(105%);
   }
 }
-
+/*========================
+=      DESKTOP STYLES     =
+========================*/
+@media (min-width: 769px) {
+  .menu-icon,
+  #menu-toggle,
+  .mobile-nav {
+    display: none;
+  }
+  .desktop-nav {
+    display: flex;
+  }
+  .desktop-nav ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin-right: 19rem;
+  }
+  .desktop-nav ul li a {
+    text-decoration: none;
+    color: rgb(63, 63, 63);
+    font-size: 12px;
+  }
+  .desktop-nav ul li a:hover {
+    color: rgb(255, 111, 0);
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 1rem;
+    background: white;
+  }
+  header .logo img {
+    width: 140px;
+    height: auto;
+    margin-left: 15rem;
+  }
+  p {
+    color: rgb(172, 172, 172);
+  }
+  /* HERO */
+  .hero-section {
+    display: flex;
+    align-items: center;
+    margin-left: 9rem;
+  }
+  .hero-section .hero-text {
+    order: 1;
+    margin: 0 auto 25px;
+    max-width: 450px;
+  }
+  .hero-section .hero-text h1 span {
+    font-size: 40px;
+  }
+  .hero-section .hero-img {
+    order: 2;
+    margin-top: 2rem;
+    margin-right: 9rem;
+  }
+  .hero-section .hero-img img {
+    max-width: 600px;
+    width: 100%;
+  }
+  /* FEATURES */
+  .features {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  .features p {
+    max-width: 450px;
+    margin: 0 auto 25px;
+  }
+  .features .tab-labels-desktop {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  .features .tab-labels-desktop label {
+    cursor: pointer;
+    width: 180px;
+    padding-bottom: 1rem;
+    text-align: center;
+    border-bottom: 3px solid transparent;
+  }
+  .features .tab-labels-desktop label:hover {
+    color: rgb(255, 111, 0);
+  }
+  .features .tabs-divider {
+    width: 40%;
+    height: 1px;
+    border: none;
+    background-color: #ccc;
+    margin: 0.5rem auto;
+    margin-top: -0.5rem;
+  }
+  .features .tabs-section .tab-content {
+    display: none;
+    margin-top: 3rem;
+    margin-bottom: 6rem;
+  }
+  .features .tabs-section .tab-content img {
+    width: 100%;
+    max-width: 400px;
+  }
+  .features .tabs-section .tab-content h3 {
+    font-size: 30px;
+  }
+  .features .tabs-section .tab-content p {
+    max-width: 350px;
+  }
+  .features .tabs-section .tab-labels-mobile {
+    display: none;
+  }
+  .features .tabs-section #simpleBookmarking:checked ~ #firstOptionContent,
+  .features .tabs-section #speedySearching:checked ~ #content-speedy,
+  .features .tabs-section #easySharing:checked ~ #content-easy {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    gap: 100px;
+  }
+  .features .tabs-section #simpleBookmarking:checked ~ .tab-labels-desktop label[for=simpleBookmarking],
+  .features .tabs-section #speedySearching:checked ~ .tab-labels-desktop label[for=speedySearching],
+  .features .tabs-section #easySharing:checked ~ .tab-labels-desktop label[for=easySharing] {
+    border-bottom: 3px solid orange;
+  }
+  /* DOWNLOAD */
+  .download-section {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .download-section p {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  .download-section .card-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .download-section .card-container .card {
+    width: 260px;
+    padding: 50px 20px 60px 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .download-section .card-container .card:nth-child(2) {
+    margin-top: 5rem;
+  }
+  .download-section .card-container .card:nth-child(3) {
+    margin-top: 10rem;
+  }
+  .download-section .card-container .card img {
+    margin-bottom: 1rem;
+  }
+  .download-section .card-container .card p {
+    margin-bottom: 1rem;
+  }
+  /* FAQ SECTION */
+  .FAQs-section {
+    text-align: center;
+  }
+  .FAQs-section p {
+    max-width: 450px;
+    margin: 0 auto 25px;
+  }
+  .FAQs-section .asked-questions-title {
+    margin-top: 4rem;
+  }
+  .FAQs-section .questions-container {
+    max-width: 550px;
+    width: 100%;
+    margin: 50px auto;
+  }
+  .FAQs-section .questions-container summary {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 5px;
+  }
+  .FAQs-section .questions-container summary:hover {
+    color: #ff9b04;
+  }
+  .FAQs-section .questions-container .arrow-icon {
+    width: 18px;
+    height: 12px;
+    transition: transform 0.3s;
+  }
+  .FAQs-section .questions-container details[open] .arrow-icon {
+    transform: rotate(180deg);
+    filter: brightness(0) saturate(100%) invert(47%) sepia(85%) saturate(2757%) hue-rotate(358deg) brightness(102%) contrast(105%);
+  }
+  .FAQs-section .questions-container hr {
+    width: 35rem;
+    margin: 1.2rem 0;
+  }
+  .FAQs-section details p {
+    text-align: left;
+    margin-top: 0.5rem;
+    margin-left: 0px;
+  }
+  /* SIGN UP SECTION */
+  .sign-up-section {
+    display: flex;
+    flex-direction: column;
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+    background-color: #4b5eff;
+    color: white;
+    align-items: center;
+    text-align: center;
+  }
+  .sign-up-section p {
+    color: white;
+  }
+  .sign-up-section h2 {
+    max-width: 300px;
+    margin: 0 auto 25px;
+  }
+  .sign-up-section .sign-up-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    max-width: 500px;
+  }
+  .sign-up-section .sign-up-button input {
+    flex: 1;
+    padding: 10px 4rem;
+    border-radius: 4px;
+    border: none;
+  }
+  .sign-up-section .sign-up-button button {
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: none;
+    background-color: rgb(253, 69, 28);
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .sign-up-section .sign-up-button button:hover {
+    background-color: #faf9f9;
+    color: rgb(255, 134, 4);
+    box-shadow: inset 0 0 0 1px rgb(255, 134, 4);
+  }
+  /* FOOTER */
+  footer {
+    display: flex;
+    background-color: #33323d;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 2rem;
+  }
+  footer .links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-left: 15rem;
+  }
+  footer .links img {
+    width: 150px;
+    filter: brightness(0) invert(1);
+  }
+  footer .links a {
+    margin-left: 0.5rem;
+    color: #b7b7b7;
+  }
+  footer .links a:hover {
+    color: orange;
+    cursor: pointer;
+  }
+  footer .image-links {
+    display: flex;
+    margin-right: 13rem;
+  }
+  footer .image-links img {
+    width: 20px;
+    margin-right: 2rem;
+  }
+  footer .image-links img:hover {
+    filter: brightness(0) saturate(100%) invert(47%) sepia(85%) saturate(2757%) hue-rotate(358deg) brightness(102%) contrast(105%);
+    cursor: pointer;
+  }
+}
 .btn-primary {
   color: white;
   display: inline-block;
