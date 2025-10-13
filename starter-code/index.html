@@ -4,230 +4,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bookmark Nav</title>
-  
-  <link rel="stylesheet" href="css/main.css">
+  <title>Bookmark - A Simple Bookmark Manager</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles. css">
 </head>
 
 <body>
-  <header>
-    <div class="logo">
-      <a href="#">
-        <img src="images/logo-bookmark.svg" alt="logo">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg py-3 w-75 mx-auto">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="images/logo-bookmark.svg" alt="Bookmark Logo" height="35">
       </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav align-items-lg-center">
+          <li class="nav-item"><a class="nav-link text-uppercase mx-2" href="#">Features</a></li>
+          <li class="nav-item"><a class="nav-link text-uppercase mx-2" href="#">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link text-uppercase mx-2" href="#">Contact</a></li>
+          <li class="nav-item ms-lg-3">
+            <button class="btn login-btn px-4 py-2 text-uppercase fw-semibold">Login</button>
+          </li>
+        </ul>
+      </div>
     </div>
+  </nav>
 
-    <label for="menu-toggle" class="menu-icon">
-      <img src="images/icon-hamburger.svg" alt="menu">
-    </label>
-    <input type="checkbox" id="menu-toggle">
-
-    <nav class="desktop-nav">
-      <ul>
-        <li><a href="#">FEATURES</a></li>
-        <li><a href="#">PRICING</a></li>
-        <li><a href="#">CONTACT</a></li>
-         <li><button class="btn-secondary" href="#">LOGIN</button></li>
-      </ul>
-      
-    </nav>
-
-    <nav class="mobile-nav">
-      <div>
-        <img src="images/logo-bookmark.svg" alt="logo">
-        <label for="menu-toggle" class="close">
-          <img src="images/icon-close.svg" alt="cancel">
-        </label>
-      </div>
-
-      <hr>
-      <a href="#">FEATURES</a>
-      <hr>
-      <a href="#">PRICING</a>
-      <hr>
-      <a href="#">CONTACT</a>
-      <hr>
-      <a href="#"><b> LOGIN</b></a>
-    </nav>
-  </header>
-
-  <main>
-    <section class="hero-section">
-      <div class="hero-img">
-        <img src="images/illustration-hero.svg" alt="hero-img">
-      </div>
-
-      <div class="hero-text">
-        <h1>A SIMPLE BOOKMARK MANAGER</h1>
-        <p>A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.</p>
-        <button class="btn-primary">Get it on Chrome</button>
-        <button class="btn-firefox">Get it on Firefox</button>
-      </div>
-    </section>
-
-    <section class="features">
-      <div class="intro-features">
-        <h2>Features</h2>
-        <p>Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.</p>
-      </div>
-
-      <div class="tabs-section">
-        <input type="radio" name="tabs" id="simpleBookmarking" checked>
-        <input type="radio" name="tabs" id="speedySearching">
-        <input type="radio" name="tabs" id="easySharing">
-
-        <div class="tab-labels-mobile">
-          <hr>
-          <label for="simpleBookmarking">Simple Bookmarking</label>
-          <hr>
-          <label for="speedySearching">Speedy Searching</label>
-          <hr>
-          <label for="easySharing">Easy Sharing</label>
-          <hr>
-        </div>
-
-        <div class="tab-labels-desktop">
-          <label for="simpleBookmarking">Simple Bookmarking</label>
-          <label for="speedySearching">Speedy Searching</label>
-          <label for="easySharing">Easy Sharing</label>
-          
-        </div>
-
-        <hr class="tabs-divider">
-
-        <div class="tab-content" id="firstOptionContent">
-          <img src="images/illustration-features-tab-1.svg" alt="simple bookmarking">
-          <div>
-            <h3>Bookmark in one click</h3>
-            <p>Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
-            <button class="btn-moreinfo">More Info</button>
+  <!-- Hero Section -->
+  <section class="hero-section mt-5">
+    <div class="container w-75 mx-auto">
+      <div class="row align-items-center">
+        <!-- Texto -->
+        <div class="col-lg-6 mb-5 mb-lg-0 ">
+          <h1 class="fw-bold display-5 mb-3">A Simple Bookmark Manager</h1>
+          <p class="text-muted mb-4  mx-auto">
+            A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites
+            load instantly. Try it for free.
+          </p>
+          <div class="d-flex gap-3">
+            <button class="btn btn-chrome shadow-sm px-4 py-2">Get it on Chrome</button>
+            <button class="btn btn-firefox shadow-sm px-4 py-2">Get it on Firefox</button>
           </div>
         </div>
 
-        <div class="tab-content" id="content-speedy">
-          <img src="images/illustration-features-tab-2.svg" alt="speedy searching">
-          <div>
-            <h3>Intelligent Search</h3>
-            <p>Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.</p>
-            <button class="btn-moreinfo">More Info</button>
-          </div>
-        </div>
-
-        <div class="tab-content" id="content-easy">
-          <img src="images/illustration-features-tab-3.svg" alt="easy sharing">
-          <div>
-            <h3>Share your bookmarks</h3>
-            <p>Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.</p>
-            <button class="btn-moreinfo">More Info</button>
-          </div>
+        <!-- Imagen -->
+        <div class="col-lg-6 text-center">
+          <img src="images/illustration-hero.svg" alt="Bookmark Interface" class="hero-image img-fluid">
         </div>
       </div>
-    </section>
-
-    <section class="download-section">
-      <div>
-        <h2>Download the extension</h2>
-        <p>We've got more browsers in the pipeline. Please do let us know if you've got a favourite you'd like us to prioritize.</p>
-      </div>
-
-      <div class="card-container">
-        <div class="card">
-          <img src="images/logo-chrome.svg" alt="Chrome logo" class="logo-card">
-          <h2>Add to Chrome</h2>
-          <p>Minimum version 62</p>
-          <img src="images/bg-dots.svg" alt="">
-          <button class="btn-primary">Add & Install Extension</button>
-        </div>
-
-        <div class="card">
-          <img src="images/logo-firefox.svg" alt="firefox logo" class="logo-card">
-          <h2>Add to Firefox</h2>
-          <p>Minimum version 55</p>
-          <img src="images/bg-dots.svg" alt="">
-          <button class="btn-primary">Add & Install Extension</button>
-        </div>
-
-        <div class="card">
-          <img src="images/logo-opera.svg" alt="opera logo" class="logo-card">
-          <h2>Add to Opera</h2>
-          <p>Minimum version 46</p>
-          <img src="images/bg-dots.svg" alt="">
-          <button class="btn-primary">Add & Install Extension</button>
-        </div>
-      </div>
-    </section>
-
-    <section class="FAQs-section">
-      <div class="asked-questions-title">
-        <h2>Frequently Asked Questions</h2>
-        <p>Here are some of our FAQs. If you have any other questions you'd like answered please feel free to email us.</p>
-      </div>
-
-      <div class="questions-container">
-        <hr class="first-hr-faqs">
-        <details>
-          <summary>
-            What is Bookmark?
-            <img src="images/icon-arrow.svg" alt="Toggle" class="arrow-icon">
-          </summary>
-          <p>Bookmark is a tool that lets you save and organize websites easily.</p>
-        </details>
-        <hr>
-        <details>
-          <summary>
-            How can I request a new browser?
-            <img src="images/icon-arrow.svg" alt="Toggle" class="arrow-icon">
-          </summary>
-          <p>You can request a new browser by contacting support or using the form.</p>
-        </details>
-        <hr>
-        <details>
-          <summary>
-            Is there a mobile app?
-            <img src="images/icon-arrow.svg" alt="Toggle" class="arrow-icon">
-          </summary>
-          <p>Yes! Our mobile app is available on iOS and Android stores.</p>
-        </details>
-        <hr>
-        <details>
-          <summary>
-            What about other Chromium browsers?
-            <img src="images/icon-arrow.svg" alt="Toggle" class="arrow-icon">
-          </summary>
-          <p>We support most Chromium browsers with similar features.</p>
-        </details>
-        <hr>
-        <button href="#" class="btn-moreinfo">More Info</button>
-      </div>
-    </section>
-
-    <section class="sign-up-section">
-      <div>
-        <p>35.000+ ALREADY JOINED</p>
-        <h2>Stay up-to-date with what we're doing</h2>
-        <form>
-          <div class="sign-up-button">
-            <input type="email" id="email" placeholder="Enter your email address" required>
-            <button class="btn-secondary" type="submit">Contact Us</button>
-          </div>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="links">
-      <img src="images/logo-bookmark.svg" alt="logo">
-      <a>FEATURES</a>
-      <a>PRICING</a>
-      <a>CONTACT</a>
     </div>
+  </section>
 
-    <div class="image-links">
-      <img src="images/icon-facebook.svg" alt="logo">
-      <img src="images/icon-twitter.svg" alt="logo">
-    </div>
-  </footer>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
